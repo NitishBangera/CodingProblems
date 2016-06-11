@@ -79,11 +79,13 @@ public class SnakeAndLadder {
         visited.add(1);
         
         Cell cell = null;
+        int steps = -1;
         while(!queue.isEmpty()) {
             cell = queue.poll();
             int pos = cell.getPosition();
             
             if (pos == n - 1) {
+                steps = cell.getDistance();
                 break;
             }
             
@@ -97,7 +99,7 @@ public class SnakeAndLadder {
             }
         }
         
-        return (cell.getPosition() == n - 1) ? cell.getDistance() : -1;
+        return steps;
     }
     
     public static void main(String[] args) {
