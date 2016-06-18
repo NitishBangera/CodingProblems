@@ -2,6 +2,8 @@
 * 100 people stand in a circle in order 1 to 100. No. 1 has a sword.
 * He kills the next person (i.e. No. 2) and gives the sword to the next living person (i.e. No. 3).
 * All people do the same until only 1 survives. Which number survives to the end?
+*
+* https://en.wikipedia.org/wiki/Josephus_problem
 **/
 public class KillCircle {
   public static void printSurvivors(int[] persons) {
@@ -48,13 +50,21 @@ public class KillCircle {
     if (n == 1) {
       return 1;
     } else {
-      return (josRecursive(n - 1, k) + k-1) % n + 1;
+      return ((josRecursive(n - 1, k) + k - 1) % n) + 1;
     }
   }
 
   public static void josephus2(int n, int k) {
     System.out.println("Method 2");
     System.out.println("Safe position : " + josRecursive(n, k));
+  }
+
+  public static void josephus3(int n) {
+    System.out.println("Method 3");
+    // Theorem : 2L + 1 where L is difference between n and
+    // closest power of 2 less than or equal to n.
+    int safePosition = 2 * (n - Integer.highestOneBit(n)) + 1;
+    System.out.println("Safe Position : " + safePosition);
   }
 
   public static void main(String... args) {
@@ -65,6 +75,9 @@ public class KillCircle {
     } else {
       josephus1(n, k);
       josephus2(n, k);
+      if (k == 2) {
+        josephus3(n);
+      }
     }
   }
 }
