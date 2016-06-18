@@ -18,7 +18,7 @@ public class SansaXor {
           int val = scan.nextInt();
           // Only take even indexes as odd index will cancel out.
           if ((n & 1) == 0) {
-              xorVal ^= val;
+            xorVal ^= val;
           }
         }
       } else {
