@@ -22,7 +22,7 @@ public class KillCircle {
     int round = 1;
     int step = k;
     printSurvivors(persons);
-    
+
     while(count != 1) {
       for (int i = 0; i < n; i++) {
         if (persons[i] == 1) {
@@ -39,7 +39,7 @@ public class KillCircle {
         }
       }
 
-      System.out.printf("\nRound %d Survivors\n", round++);
+      System.out.printf("Round %d Survivors\n", round++);
       printSurvivors(persons);
     }
   }
