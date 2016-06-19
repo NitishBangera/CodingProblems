@@ -11,3 +11,4 @@ Coding Problems undertaken
 8. Counter game
 9. Josephus Problem: 100 Soldiers in a Circle Riddle
 10. Project Euler problem 2 : EvenFibonacci
+11. Lattice Paths
