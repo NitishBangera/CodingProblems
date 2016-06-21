@@ -13,3 +13,4 @@ Coding Problems undertaken
 10. Project Euler problem 2 : EvenFibonacci
 11. Lattice Paths
 12. Longest Common Substring Problem
+13. Prime numbers using Sieve of Eratosthenes
