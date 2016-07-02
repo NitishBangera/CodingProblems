@@ -14,3 +14,4 @@ Coding Problems undertaken
 11. Lattice Paths
 12. Longest Common Substring Problem
 13. Prime numbers using Sieve of Eratosthenes
+14. Spiral Matrix
