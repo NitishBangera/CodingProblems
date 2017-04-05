@@ -1,0 +1,12 @@
+drop database if exists wallethub;
+create database wallethub;
+use wallethub;
+drop table if exists votes;
+
+create table votes (name char(10), votes int);
+insert into votes values ('Smith',10), ('Jones',15), ('White',20), ('Black',40), ('Green',50), ('Brown',20);
+
+source answers/q1.sql;
+
+drop table votes;
+drop database wallethub;

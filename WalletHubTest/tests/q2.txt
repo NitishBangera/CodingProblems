@@ -1,0 +1,9 @@
+drop database if exists wallethub;
+create database wallethub;
+use wallethub;
+source answers/q2.sql
+
+select initcap("UNITED states Of AmERIca");
+
+drop function initcap;
+drop database wallethub;

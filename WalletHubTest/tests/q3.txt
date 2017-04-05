@@ -1,0 +1,15 @@
+drop database if exists wallethub;
+create database wallethub;
+use wallethub;
+
+drop table if exists sometbl;
+create table sometbl ( ID INT, NAME VARCHAR(50) );
+INSERT INTO sometbl VALUES (1, 'Smith'), (2, 'Julio|Jones|Falcons'), (3,'White|Snow'), (4, 'Paint|It|Red'), (5, 'Green|Lantern'), (6, 'Brown|bag');
+
+source answers/q3.sql
+
+call split_column("|");
+
+drop procedure split_column;
+drop table sometbl;
+drop database wallethub;

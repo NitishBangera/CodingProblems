@@ -1,0 +1,19 @@
+drop database if exists wallethub;
+create database wallethub;
+use wallethub;
+
+drop table if exists bugs;
+create table bugs (id int, open_date date, closed_date date, severity int);
+
+insert into bugs values (1, '2017-03-01', '2017-03-04', 1);
+insert into bugs values (2, '2017-03-02', '2017-03-03', 2);
+insert into bugs values (3, '2017-03-01', '2017-03-10', 3);
+insert into bugs values (4, '2017-03-07', '2017-03-10', 4);
+
+source answers/q4.sql
+
+call get_bugs('2017-03-01', '2017-03-20');
+
+drop procedure get_bugs;
+drop table bugs;
+drop database wallethub;

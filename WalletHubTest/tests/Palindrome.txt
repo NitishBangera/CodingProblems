@@ -1,0 +1,6 @@
+Value|IsPalindrome|CaseSensitive
+1221|true|true
+1121|false|true
+Malayalam|true|false
+Malayalam|false|true
+Mumbai|false|true
