@@ -18,3 +18,4 @@ Coding Problems undertaken
 15. Complete Binary Tree traversal
 16. Max cost path and Backtracking
 17. WalletHub programming test
+18. Solving Maximization and Minimization problems using Cplex.
