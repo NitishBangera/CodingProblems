@@ -1,0 +1,631 @@
+2017-03-18 15:38:43.666  INFO 22657 --- [main] c.crossover.trial.weather.WeatherServer  : Starting WeatherServer on Bang with PID 22657 (started by nitish in /media/nitish/5C4ED2C44ED2965C/MyProject/Crossover/Software Architect/March2017/weather)
+2017-03-18 15:38:43.699  INFO 22657 --- [main] c.crossover.trial.weather.WeatherServer  : No active profile set, falling back to default profiles: default
+2017-03-18 15:38:44.146  INFO 22657 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@11e21d0e: startup date [Sat Mar 18 15:38:44 IST 2017]; root of context hierarchy
+2017-03-18 15:38:49.522  INFO 22657 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9090 (http)
+2017-03-18 15:38:49.579  INFO 22657 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-03-18 15:38:49.582  INFO 22657 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-03-18 15:38:50.144  INFO 22657 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-03-18 15:38:50.147  INFO 22657 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6037 ms
+2017-03-18 15:38:50.787  INFO 22657 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-03-18 15:38:50.795  INFO 22657 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-03-18 15:38:50.818  INFO 22657 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-03-18 15:38:50.819  INFO 22657 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-03-18 15:38:50.819  INFO 22657 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-03-18 15:38:52.006  INFO 22657 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@11e21d0e: startup date [Sat Mar 18 15:38:44 IST 2017]; root of context hierarchy
+2017-03-18 15:38:52.238  INFO 22657 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}/{lat}/{long}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.addAirport(java.lang.String,java.lang.String,java.lang.String)
+2017-03-18 15:38:52.244  INFO 22657 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.deleteAirport(java.lang.String)
+2017-03-18 15:38:52.247  INFO 22657 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airports],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.getAirports()
+2017-03-18 15:38:52.250  INFO 22657 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.getAirport(java.lang.String)
+2017-03-18 15:38:52.252  INFO 22657 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/ping],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.ping()
+2017-03-18 15:38:52.260  INFO 22657 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/weather/{iata}/{pointType}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.updateWeather(java.lang.String,java.lang.String,java.lang.String)
+2017-03-18 15:38:52.266  INFO 22657 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/exit],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.exit()
+2017-03-18 15:38:52.270  INFO 22657 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/query/weather/{iata}/{radius}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.weather(java.lang.String,java.lang.String)
+2017-03-18 15:38:52.275  INFO 22657 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/query/ping],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.ping()
+2017-03-18 15:38:52.278  INFO 22657 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-03-18 15:38:52.283  INFO 22657 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-03-18 15:38:52.388  INFO 22657 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 15:38:52.390  INFO 22657 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 15:38:52.493  INFO 22657 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 15:38:52.952  INFO 22657 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-18 15:38:53.190  INFO 22657 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9090 (http)
+2017-03-18 15:38:53.199  INFO 22657 --- [main] c.crossover.trial.weather.WeatherServer  : Started WeatherServer in 11.648 seconds (JVM running for 14.892)
+2017-03-18 15:38:53.541  INFO 22657 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-03-18 15:38:53.542  INFO 22657 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-03-18 15:38:53.574  INFO 22657 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 32 ms
+2017-03-18 15:39:15.926  INFO 22657 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@11e21d0e: startup date [Sat Mar 18 15:38:44 IST 2017]; root of context hierarchy
+2017-03-18 15:39:15.935  INFO 22657 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-03-18 15:41:48.389  INFO 22776 --- [main] c.crossover.trial.weather.WeatherServer  : Starting WeatherServer on Bang with PID 22776 (started by nitish in /media/nitish/5C4ED2C44ED2965C/MyProject/Crossover/Software Architect/March2017/weather)
+2017-03-18 15:41:48.405  INFO 22776 --- [main] c.crossover.trial.weather.WeatherServer  : No active profile set, falling back to default profiles: default
+2017-03-18 15:41:48.665  INFO 22776 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@11e21d0e: startup date [Sat Mar 18 15:41:48 IST 2017]; root of context hierarchy
+2017-03-18 15:41:52.975  INFO 22776 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9090 (http)
+2017-03-18 15:41:53.014  INFO 22776 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-03-18 15:41:53.016  INFO 22776 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-03-18 15:41:53.387  INFO 22776 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-03-18 15:41:53.388  INFO 22776 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4732 ms
+2017-03-18 15:41:53.997  INFO 22776 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-03-18 15:41:54.007  INFO 22776 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-03-18 15:41:54.009  INFO 22776 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-03-18 15:41:54.009  INFO 22776 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-03-18 15:41:54.009  INFO 22776 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-03-18 15:41:54.888  INFO 22776 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@11e21d0e: startup date [Sat Mar 18 15:41:48 IST 2017]; root of context hierarchy
+2017-03-18 15:41:55.106  INFO 22776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.deleteAirport(java.lang.String)
+2017-03-18 15:41:55.116  INFO 22776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/ping],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.ping()
+2017-03-18 15:41:55.117  INFO 22776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/weather/{iata}/{pointType}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.updateWeather(java.lang.String,java.lang.String,java.lang.String)
+2017-03-18 15:41:55.118  INFO 22776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airports],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.getAirports()
+2017-03-18 15:41:55.119  INFO 22776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.getAirport(java.lang.String)
+2017-03-18 15:41:55.119  INFO 22776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}/{lat}/{long}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.addAirport(java.lang.String,java.lang.String,java.lang.String)
+2017-03-18 15:41:55.120  INFO 22776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/exit],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.exit()
+2017-03-18 15:41:55.125  INFO 22776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/query/weather/{iata}/{radius}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.weather(java.lang.String,java.lang.String)
+2017-03-18 15:41:55.129  INFO 22776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/query/ping],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.ping()
+2017-03-18 15:41:55.133  INFO 22776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-03-18 15:41:55.141  INFO 22776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-03-18 15:41:55.215  INFO 22776 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 15:41:55.217  INFO 22776 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 15:41:55.315  INFO 22776 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 15:41:55.768  INFO 22776 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-18 15:41:55.958  INFO 22776 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9090 (http)
+2017-03-18 15:41:55.995  INFO 22776 --- [main] c.crossover.trial.weather.WeatherServer  : Started WeatherServer in 8.809 seconds (JVM running for 9.856)
+2017-03-18 15:41:56.008  INFO 22776 --- [main] c.c.trial.weather.parser.FileParser      : Loading com.crossover.trial.weather.model.AirportData data.
+2017-03-18 15:41:56.013  INFO 22776 --- [main] c.c.trial.weather.parser.FileParser      : Loaded 10 com.crossover.trial.weather.model.AirportData entries
+2017-03-18 15:41:56.288  INFO 22776 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-03-18 15:41:56.291  INFO 22776 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-03-18 15:41:56.328  INFO 22776 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 36 ms
+2017-03-18 15:42:07.752  INFO 22776 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@11e21d0e: startup date [Sat Mar 18 15:41:48 IST 2017]; root of context hierarchy
+2017-03-18 15:42:07.757  INFO 22776 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-03-18 15:45:16.926  INFO 22883 --- [main] c.crossover.trial.weather.WeatherServer  : Starting WeatherServer on Bang with PID 22883 (started by nitish in /media/nitish/5C4ED2C44ED2965C/MyProject/Crossover/Software Architect/March2017/weather)
+2017-03-18 15:45:16.942  INFO 22883 --- [main] c.crossover.trial.weather.WeatherServer  : No active profile set, falling back to default profiles: default
+2017-03-18 15:45:17.217  INFO 22883 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@11e21d0e: startup date [Sat Mar 18 15:45:17 IST 2017]; root of context hierarchy
+2017-03-18 15:45:21.615  INFO 22883 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9090 (http)
+2017-03-18 15:45:21.649  INFO 22883 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-03-18 15:45:21.652  INFO 22883 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-03-18 15:45:21.917  INFO 22883 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-03-18 15:45:21.918  INFO 22883 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4706 ms
+2017-03-18 15:45:22.477  INFO 22883 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-03-18 15:45:22.492  INFO 22883 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-03-18 15:45:22.494  INFO 22883 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-03-18 15:45:22.495  INFO 22883 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-03-18 15:45:22.497  INFO 22883 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-03-18 15:45:23.460  INFO 22883 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@11e21d0e: startup date [Sat Mar 18 15:45:17 IST 2017]; root of context hierarchy
+2017-03-18 15:45:23.684  INFO 22883 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/ping],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.ping()
+2017-03-18 15:45:23.687  INFO 22883 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/weather/{iata}/{pointType}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.updateWeather(java.lang.String,java.lang.String,java.lang.String)
+2017-03-18 15:45:23.688  INFO 22883 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airports],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.getAirports()
+2017-03-18 15:45:23.689  INFO 22883 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.getAirport(java.lang.String)
+2017-03-18 15:45:23.690  INFO 22883 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}/{lat}/{long}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.addAirport(java.lang.String,java.lang.String,java.lang.String)
+2017-03-18 15:45:23.690  INFO 22883 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.deleteAirport(java.lang.String)
+2017-03-18 15:45:23.691  INFO 22883 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/exit],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.exit()
+2017-03-18 15:45:23.696  INFO 22883 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/query/ping],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.ping()
+2017-03-18 15:45:23.697  INFO 22883 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/query/weather/{iata}/{radius}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.weather(java.lang.String,java.lang.String)
+2017-03-18 15:45:23.700  INFO 22883 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-03-18 15:45:23.701  INFO 22883 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-03-18 15:45:23.764  INFO 22883 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 15:45:23.765  INFO 22883 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 15:45:23.874  INFO 22883 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 15:45:24.246  INFO 22883 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-18 15:45:24.349  INFO 22883 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9090 (http)
+2017-03-18 15:45:24.360  INFO 22883 --- [main] c.crossover.trial.weather.WeatherServer  : Started WeatherServer in 8.758 seconds (JVM running for 9.816)
+2017-03-18 15:45:24.372  INFO 22883 --- [main] c.c.trial.weather.parser.FileParser      : Loading AirportData data.
+2017-03-18 15:45:24.373  INFO 22883 --- [main] c.c.trial.weather.parser.FileParser      : Loaded 10 AirportData entries
+2017-03-18 15:45:24.586  INFO 22883 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-03-18 15:45:24.586  INFO 22883 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-03-18 15:45:24.615  INFO 22883 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
+2017-03-18 15:49:03.021  INFO 22883 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@11e21d0e: startup date [Sat Mar 18 15:45:17 IST 2017]; root of context hierarchy
+2017-03-18 15:49:03.026  INFO 22883 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-03-18 15:49:14.864  INFO 23348 --- [main] c.crossover.trial.weather.WeatherServer  : Starting WeatherServer on Bang with PID 23348 (started by nitish in /media/nitish/5C4ED2C44ED2965C/MyProject/Crossover/Software Architect/March2017/weather)
+2017-03-18 15:49:14.888  INFO 23348 --- [main] c.crossover.trial.weather.WeatherServer  : No active profile set, falling back to default profiles: default
+2017-03-18 15:49:15.216  INFO 23348 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29215f06: startup date [Sat Mar 18 15:49:15 IST 2017]; root of context hierarchy
+2017-03-18 15:49:19.980  INFO 23348 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9090 (http)
+2017-03-18 15:49:20.011  INFO 23348 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-03-18 15:49:20.014  INFO 23348 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-03-18 15:49:20.356  INFO 23348 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-03-18 15:49:20.360  INFO 23348 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5152 ms
+2017-03-18 15:49:21.195  INFO 23348 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-03-18 15:49:21.209  INFO 23348 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-03-18 15:49:21.211  INFO 23348 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-03-18 15:49:21.211  INFO 23348 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-03-18 15:49:21.211  INFO 23348 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-03-18 15:49:22.702  INFO 23348 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29215f06: startup date [Sat Mar 18 15:49:15 IST 2017]; root of context hierarchy
+2017-03-18 15:49:22.948  INFO 23348 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/ping],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.ping()
+2017-03-18 15:49:22.955  INFO 23348 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/weather/{iata}/{pointType}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.updateWeather(java.lang.String,java.lang.String,java.lang.String)
+2017-03-18 15:49:22.957  INFO 23348 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airports],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.getAirports()
+2017-03-18 15:49:22.961  INFO 23348 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.getAirport(java.lang.String)
+2017-03-18 15:49:22.965  INFO 23348 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}/{lat}/{long}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.addAirport(java.lang.String,java.lang.String,java.lang.String)
+2017-03-18 15:49:22.967  INFO 23348 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.deleteAirport(java.lang.String)
+2017-03-18 15:49:22.971  INFO 23348 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/exit],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.exit()
+2017-03-18 15:49:22.978  INFO 23348 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/query/ping],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.ping()
+2017-03-18 15:49:22.991  INFO 23348 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/query/weather/{iata}/{radius}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.weather(java.lang.String,java.lang.String)
+2017-03-18 15:49:22.995  INFO 23348 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-03-18 15:49:23.004  INFO 23348 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-03-18 15:49:23.145  INFO 23348 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 15:49:23.146  INFO 23348 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 15:49:23.290  INFO 23348 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 15:49:24.026  INFO 23348 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-18 15:49:24.164  INFO 23348 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9090 (http)
+2017-03-18 15:49:24.181  INFO 23348 --- [main] c.crossover.trial.weather.WeatherServer  : Started WeatherServer in 10.471 seconds (JVM running for 12.039)
+2017-03-18 15:49:24.185  INFO 23348 --- [main] c.c.trial.weather.parser.FileParser      : Loading AirportData data.
+2017-03-18 15:49:24.190  INFO 23348 --- [main] c.c.trial.weather.parser.FileParser      : Loaded 10 AirportData entries
+2017-03-18 15:49:24.502  INFO 23348 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-03-18 15:49:24.503  INFO 23348 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-03-18 15:49:24.543  INFO 23348 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 40 ms
+2017-03-18 15:52:08.235  INFO 23495 --- [main] c.crossover.trial.weather.WeatherServer  : Starting WeatherServer on Bang with PID 23495 (started by nitish in /media/nitish/5C4ED2C44ED2965C/MyProject/Crossover/Software Architect/March2017/weather)
+2017-03-18 15:52:08.267  INFO 23495 --- [main] c.crossover.trial.weather.WeatherServer  : No active profile set, falling back to default profiles: default
+2017-03-18 15:52:08.546  INFO 23495 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29215f06: startup date [Sat Mar 18 15:52:08 IST 2017]; root of context hierarchy
+2017-03-18 15:52:12.860  INFO 23495 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9090 (http)
+2017-03-18 15:52:12.899  INFO 23495 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-03-18 15:52:12.901  INFO 23495 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-03-18 15:52:13.360  INFO 23495 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-03-18 15:52:13.361  INFO 23495 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4821 ms
+2017-03-18 15:52:14.309  INFO 23495 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-03-18 15:52:14.351  INFO 23495 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-03-18 15:52:14.352  INFO 23495 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-03-18 15:52:14.353  INFO 23495 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-03-18 15:52:14.353  INFO 23495 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-03-18 15:52:16.361  INFO 23495 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29215f06: startup date [Sat Mar 18 15:52:08 IST 2017]; root of context hierarchy
+2017-03-18 15:52:16.824  INFO 23495 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/ping],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.ping()
+2017-03-18 15:52:16.830  INFO 23495 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/weather/{iata}/{pointType}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.updateWeather(java.lang.String,java.lang.String,java.lang.String)
+2017-03-18 15:52:16.832  INFO 23495 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airports],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.getAirports()
+2017-03-18 15:52:16.834  INFO 23495 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.getAirport(java.lang.String)
+2017-03-18 15:52:16.836  INFO 23495 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}/{lat}/{long}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.addAirport(java.lang.String,java.lang.String,java.lang.String)
+2017-03-18 15:52:16.846  INFO 23495 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.deleteAirport(java.lang.String)
+2017-03-18 15:52:16.847  INFO 23495 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/exit],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.exit()
+2017-03-18 15:52:16.851  INFO 23495 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/query/weather/{iata}/{radius}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.weather(java.lang.String,java.lang.String)
+2017-03-18 15:52:16.856  INFO 23495 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/query/ping],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.ping()
+2017-03-18 15:52:16.859  INFO 23495 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-03-18 15:52:16.867  INFO 23495 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-03-18 15:52:17.021  INFO 23495 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 15:52:17.027  INFO 23495 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 15:52:17.236  INFO 23495 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 15:52:18.240  INFO 23495 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-18 15:52:18.480  INFO 23495 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9090 (http)
+2017-03-18 15:52:18.491  INFO 23495 --- [main] c.crossover.trial.weather.WeatherServer  : Started WeatherServer in 11.213 seconds (JVM running for 12.405)
+2017-03-18 15:52:22.302  INFO 23495 --- [main] c.c.trial.weather.parser.FileParser      : Loading AirportData data.
+2017-03-18 15:52:22.308  INFO 23495 --- [main] c.c.trial.weather.parser.FileParser      : Loaded 10 AirportData entries
+2017-03-18 15:52:38.296  INFO 23495 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-03-18 15:52:38.298  INFO 23495 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-03-18 15:52:38.374  INFO 23495 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 75 ms
+2017-03-18 15:52:59.142  INFO 24251 --- [main] c.crossover.trial.weather.WeatherServer  : Starting WeatherServer on Bang with PID 24251 (started by nitish in /media/nitish/5C4ED2C44ED2965C/MyProject/Crossover/Software Architect/March2017/weather)
+2017-03-18 15:52:59.159  INFO 24251 --- [main] c.crossover.trial.weather.WeatherServer  : No active profile set, falling back to default profiles: default
+2017-03-18 15:52:59.456  INFO 24251 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29215f06: startup date [Sat Mar 18 15:52:59 IST 2017]; root of context hierarchy
+2017-03-18 15:53:03.446  INFO 24251 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9090 (http)
+2017-03-18 15:53:03.474  INFO 24251 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-03-18 15:53:03.476  INFO 24251 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-03-18 15:53:03.884  INFO 24251 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-03-18 15:53:03.885  INFO 24251 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4437 ms
+2017-03-18 15:53:04.493  INFO 24251 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-03-18 15:53:04.502  INFO 24251 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-03-18 15:53:04.503  INFO 24251 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-03-18 15:53:04.504  INFO 24251 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-03-18 15:53:04.504  INFO 24251 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-03-18 15:53:05.545  INFO 24251 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29215f06: startup date [Sat Mar 18 15:52:59 IST 2017]; root of context hierarchy
+2017-03-18 15:53:05.753  INFO 24251 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airports],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.getAirports()
+2017-03-18 15:53:05.756  INFO 24251 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.getAirport(java.lang.String)
+2017-03-18 15:53:05.757  INFO 24251 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}/{lat}/{long}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.addAirport(java.lang.String,java.lang.String,java.lang.String)
+2017-03-18 15:53:05.758  INFO 24251 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.deleteAirport(java.lang.String)
+2017-03-18 15:53:05.759  INFO 24251 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/ping],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.ping()
+2017-03-18 15:53:05.760  INFO 24251 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/weather/{iata}/{pointType}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.updateWeather(java.lang.String,java.lang.String,java.lang.String)
+2017-03-18 15:53:05.761  INFO 24251 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/exit],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.exit()
+2017-03-18 15:53:05.772  INFO 24251 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/query/ping],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.ping()
+2017-03-18 15:53:05.773  INFO 24251 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/query/weather/{iata}/{radius}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.weather(java.lang.String,java.lang.String)
+2017-03-18 15:53:05.776  INFO 24251 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-03-18 15:53:05.778  INFO 24251 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-03-18 15:53:05.900  INFO 24251 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 15:53:05.901  INFO 24251 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 15:53:06.041  INFO 24251 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 15:53:06.709  INFO 24251 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-18 15:53:06.812  INFO 24251 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9090 (http)
+2017-03-18 15:53:06.821  INFO 24251 --- [main] c.crossover.trial.weather.WeatherServer  : Started WeatherServer in 8.695 seconds (JVM running for 9.907)
+2017-03-18 15:56:11.464  INFO 24329 --- [main] c.crossover.trial.weather.WeatherServer  : Starting WeatherServer on Bang with PID 24329 (started by nitish in /media/nitish/5C4ED2C44ED2965C/MyProject/Crossover/Software Architect/March2017/weather)
+2017-03-18 15:56:11.482  INFO 24329 --- [main] c.crossover.trial.weather.WeatherServer  : No active profile set, falling back to default profiles: default
+2017-03-18 15:56:11.807  INFO 24329 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29215f06: startup date [Sat Mar 18 15:56:11 IST 2017]; root of context hierarchy
+2017-03-18 15:56:16.033  INFO 24329 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9090 (http)
+2017-03-18 15:56:16.074  INFO 24329 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-03-18 15:56:16.081  INFO 24329 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-03-18 15:56:16.497  INFO 24329 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-03-18 15:56:16.498  INFO 24329 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4703 ms
+2017-03-18 15:56:17.323  INFO 24329 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-03-18 15:56:17.369  INFO 24329 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-03-18 15:56:17.370  INFO 24329 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-03-18 15:56:17.371  INFO 24329 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-03-18 15:56:17.372  INFO 24329 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-03-18 15:56:19.220  INFO 24329 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29215f06: startup date [Sat Mar 18 15:56:11 IST 2017]; root of context hierarchy
+2017-03-18 15:56:19.426  INFO 24329 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/weather/{iata}/{pointType}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.updateWeather(java.lang.String,java.lang.String,java.lang.String)
+2017-03-18 15:56:19.429  INFO 24329 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.deleteAirport(java.lang.String)
+2017-03-18 15:56:19.430  INFO 24329 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/ping],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.ping()
+2017-03-18 15:56:19.431  INFO 24329 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airports],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.getAirports()
+2017-03-18 15:56:19.432  INFO 24329 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.getAirport(java.lang.String)
+2017-03-18 15:56:19.433  INFO 24329 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}/{lat}/{long}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.addAirport(java.lang.String,java.lang.String,java.lang.String)
+2017-03-18 15:56:19.434  INFO 24329 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/exit],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.exit()
+2017-03-18 15:56:19.438  INFO 24329 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/query/ping],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.ping()
+2017-03-18 15:56:19.439  INFO 24329 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/query/weather/{iata}/{radius}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.weather(java.lang.String,java.lang.String)
+2017-03-18 15:56:19.443  INFO 24329 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-03-18 15:56:19.444  INFO 24329 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-03-18 15:56:19.558  INFO 24329 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 15:56:19.560  INFO 24329 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 15:56:19.741  INFO 24329 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 15:56:20.410  INFO 24329 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-18 15:56:20.510  INFO 24329 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9090 (http)
+2017-03-18 15:56:20.520  INFO 24329 --- [main] c.crossover.trial.weather.WeatherServer  : Started WeatherServer in 9.91 seconds (JVM running for 11.09)
+2017-03-18 15:56:49.482  INFO 24329 --- [main] c.c.trial.weather.parser.FileParser      : Loading AirportData data.
+2017-03-18 16:03:50.471  INFO 24564 --- [main] c.crossover.trial.weather.WeatherServer  : Starting WeatherServer on Bang with PID 24564 (started by nitish in /media/nitish/5C4ED2C44ED2965C/MyProject/Crossover/Software Architect/March2017/weather)
+2017-03-18 16:03:50.491  INFO 24564 --- [main] c.crossover.trial.weather.WeatherServer  : No active profile set, falling back to default profiles: default
+2017-03-18 16:03:50.798  INFO 24564 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29215f06: startup date [Sat Mar 18 16:03:50 IST 2017]; root of context hierarchy
+2017-03-18 16:03:54.752  INFO 24564 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9090 (http)
+2017-03-18 16:03:54.791  INFO 24564 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-03-18 16:03:54.803  INFO 24564 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-03-18 16:03:55.115  INFO 24564 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-03-18 16:03:55.119  INFO 24564 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4327 ms
+2017-03-18 16:03:55.665  INFO 24564 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-03-18 16:03:55.693  INFO 24564 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-03-18 16:03:55.695  INFO 24564 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-03-18 16:03:55.699  INFO 24564 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-03-18 16:03:55.699  INFO 24564 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-03-18 16:03:56.821  INFO 24564 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29215f06: startup date [Sat Mar 18 16:03:50 IST 2017]; root of context hierarchy
+2017-03-18 16:03:57.096  INFO 24564 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/ping],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.ping()
+2017-03-18 16:03:57.099  INFO 24564 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/weather/{iata}/{pointType}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.updateWeather(java.lang.String,java.lang.String,java.lang.String)
+2017-03-18 16:03:57.101  INFO 24564 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airports],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.getAirports()
+2017-03-18 16:03:57.102  INFO 24564 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.getAirport(java.lang.String)
+2017-03-18 16:03:57.103  INFO 24564 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}/{lat}/{long}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.addAirport(java.lang.String,java.lang.String,java.lang.String)
+2017-03-18 16:03:57.104  INFO 24564 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.deleteAirport(java.lang.String)
+2017-03-18 16:03:57.105  INFO 24564 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/exit],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.exit()
+2017-03-18 16:03:57.109  INFO 24564 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/query/ping],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.ping()
+2017-03-18 16:03:57.111  INFO 24564 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/query/weather/{iata}/{radius}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.weather(java.lang.String,java.lang.String)
+2017-03-18 16:03:57.115  INFO 24564 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-03-18 16:03:57.116  INFO 24564 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-03-18 16:03:57.226  INFO 24564 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 16:03:57.227  INFO 24564 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 16:03:57.383  INFO 24564 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 16:03:58.280  INFO 24564 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-18 16:03:58.442  INFO 24564 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9090 (http)
+2017-03-18 16:03:58.467  INFO 24564 --- [main] c.crossover.trial.weather.WeatherServer  : Started WeatherServer in 9.208 seconds (JVM running for 10.848)
+2017-03-18 16:04:11.711  INFO 24564 --- [main] c.c.trial.weather.parser.FileParser      : Loading AirportData data.
+2017-03-18 16:04:47.662  INFO 24564 --- [main] c.c.trial.weather.parser.FileParser      : Loaded 10 AirportData entries
+2017-03-18 16:04:48.065  INFO 24564 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-03-18 16:04:48.066  INFO 24564 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-03-18 16:04:48.107  INFO 24564 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 41 ms
+2017-03-18 16:10:04.017  INFO 24934 --- [main] c.crossover.trial.weather.WeatherServer  : Starting WeatherServer on Bang with PID 24934 (started by nitish in /media/nitish/5C4ED2C44ED2965C/MyProject/Crossover/Software Architect/March2017/weather)
+2017-03-18 16:10:04.028  INFO 24934 --- [main] c.crossover.trial.weather.WeatherServer  : No active profile set, falling back to default profiles: default
+2017-03-18 16:10:04.354  INFO 24934 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29215f06: startup date [Sat Mar 18 16:10:04 IST 2017]; root of context hierarchy
+2017-03-18 16:10:09.504  INFO 24934 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9090 (http)
+2017-03-18 16:10:09.580  INFO 24934 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-03-18 16:10:09.589  INFO 24934 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-03-18 16:10:10.121  INFO 24934 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-03-18 16:10:10.122  INFO 24934 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5778 ms
+2017-03-18 16:10:10.910  INFO 24934 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-03-18 16:10:10.922  INFO 24934 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-03-18 16:10:10.924  INFO 24934 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-03-18 16:10:10.925  INFO 24934 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-03-18 16:10:10.925  INFO 24934 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-03-18 16:10:12.422  INFO 24934 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29215f06: startup date [Sat Mar 18 16:10:04 IST 2017]; root of context hierarchy
+2017-03-18 16:10:12.675  INFO 24934 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/ping],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.ping()
+2017-03-18 16:10:12.678  INFO 24934 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/weather/{iata}/{pointType}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.updateWeather(java.lang.String,java.lang.String,java.lang.String)
+2017-03-18 16:10:12.679  INFO 24934 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airports],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.getAirports()
+2017-03-18 16:10:12.680  INFO 24934 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.getAirport(java.lang.String)
+2017-03-18 16:10:12.681  INFO 24934 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}/{lat}/{long}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.addAirport(java.lang.String,java.lang.String,java.lang.String)
+2017-03-18 16:10:12.682  INFO 24934 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.deleteAirport(java.lang.String)
+2017-03-18 16:10:12.683  INFO 24934 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/exit],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.exit()
+2017-03-18 16:10:12.687  INFO 24934 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/query/ping],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.ping()
+2017-03-18 16:10:12.688  INFO 24934 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/query/weather/{iata}/{radius}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.weather(java.lang.String,java.lang.String)
+2017-03-18 16:10:12.698  INFO 24934 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-03-18 16:10:12.700  INFO 24934 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-03-18 16:10:12.897  INFO 24934 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 16:10:12.900  INFO 24934 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 16:10:13.104  INFO 24934 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 16:10:13.967  INFO 24934 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-18 16:10:14.106  INFO 24934 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9090 (http)
+2017-03-18 16:10:14.119  INFO 24934 --- [main] c.crossover.trial.weather.WeatherServer  : Started WeatherServer in 11.505 seconds (JVM running for 12.565)
+2017-03-18 16:10:27.194  INFO 24934 --- [main] c.c.trial.weather.parser.FileParser      : Loading AirportData data.
+2017-03-18 16:10:27.201  INFO 24934 --- [main] c.c.trial.weather.parser.FileParser      : Loaded 10 AirportData entries
+2017-03-18 16:10:27.498  INFO 24934 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-03-18 16:10:27.499  INFO 24934 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-03-18 16:10:27.600  INFO 24934 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 101 ms
+2017-03-18 16:14:18.211 ERROR 24934 --- [http-nio-9090-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IndexOutOfBoundsException: Index: -1, Size: 10] with root cause
+
+java.lang.IndexOutOfBoundsException: Index: -1, Size: 10
+	at java.util.LinkedList.checkElementIndex(LinkedList.java:555) ~[na:1.8.0_121]
+	at java.util.LinkedList.get(LinkedList.java:476) ~[na:1.8.0_121]
+	at com.crossover.trial.weather.service.AirportService.findAtmosphericInformation(AirportService.java:93) ~[classes/:na]
+	at com.crossover.trial.weather.service.AirportService.getWeather(AirportService.java:101) ~[classes/:na]
+	at com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.weather(RestWeatherQueryEndpoint.java:54) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_121]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_121]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_121]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_121]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133) ~[spring-web-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116) ~[spring-webmvc-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) ~[spring-webmvc-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897) ~[spring-webmvc-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) ~[spring-webmvc-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.11.jar:8.5.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105) ~[spring-web-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:474) [tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349) [tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:783) [tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:798) [tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1434) [tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.11.jar:8.5.11]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_121]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_121]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.11.jar:8.5.11]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_121]
+
+2017-03-18 16:15:28.490 ERROR 24934 --- [http-nio-9090-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IndexOutOfBoundsException: Index: -1, Size: 10] with root cause
+
+java.lang.IndexOutOfBoundsException: Index: -1, Size: 10
+	at java.util.LinkedList.checkElementIndex(LinkedList.java:555) ~[na:1.8.0_121]
+	at java.util.LinkedList.get(LinkedList.java:476) ~[na:1.8.0_121]
+	at com.crossover.trial.weather.service.AirportService.findAtmosphericInformation(AirportService.java:93) ~[classes/:na]
+	at com.crossover.trial.weather.service.AirportService.getWeather(AirportService.java:101) ~[classes/:na]
+	at com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.weather(RestWeatherQueryEndpoint.java:54) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_121]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_121]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_121]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_121]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133) ~[spring-web-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116) ~[spring-webmvc-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) ~[spring-webmvc-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897) ~[spring-webmvc-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) ~[spring-webmvc-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.11.jar:8.5.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105) ~[spring-web-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.7.RELEASE.jar:4.3.7.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:474) [tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349) [tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:783) [tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:798) [tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1434) [tomcat-embed-core-8.5.11.jar:8.5.11]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.11.jar:8.5.11]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_121]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_121]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.11.jar:8.5.11]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_121]
+
+2017-03-18 16:16:38.164  INFO 25127 --- [main] c.crossover.trial.weather.WeatherServer  : Starting WeatherServer on Bang with PID 25127 (started by nitish in /media/nitish/5C4ED2C44ED2965C/MyProject/Crossover/Software Architect/March2017/weather)
+2017-03-18 16:16:38.185  INFO 25127 --- [main] c.crossover.trial.weather.WeatherServer  : No active profile set, falling back to default profiles: default
+2017-03-18 16:16:38.438  INFO 25127 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29215f06: startup date [Sat Mar 18 16:16:38 IST 2017]; root of context hierarchy
+2017-03-18 16:16:43.180  INFO 25127 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9090 (http)
+2017-03-18 16:16:43.210  INFO 25127 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-03-18 16:16:43.217  INFO 25127 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-03-18 16:16:43.569  INFO 25127 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-03-18 16:16:43.570  INFO 25127 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5141 ms
+2017-03-18 16:16:44.215  INFO 25127 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-03-18 16:16:44.226  INFO 25127 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-03-18 16:16:44.227  INFO 25127 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-03-18 16:16:44.228  INFO 25127 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-03-18 16:16:44.229  INFO 25127 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-03-18 16:16:45.801  INFO 25127 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29215f06: startup date [Sat Mar 18 16:16:38 IST 2017]; root of context hierarchy
+2017-03-18 16:16:46.245  INFO 25127 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airports],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.getAirports()
+2017-03-18 16:16:46.261  INFO 25127 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.getAirport(java.lang.String)
+2017-03-18 16:16:46.262  INFO 25127 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}/{lat}/{long}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.addAirport(java.lang.String,java.lang.String,java.lang.String)
+2017-03-18 16:16:46.263  INFO 25127 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.deleteAirport(java.lang.String)
+2017-03-18 16:16:46.268  INFO 25127 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/weather/{iata}/{pointType}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.updateWeather(java.lang.String,java.lang.String,java.lang.String)
+2017-03-18 16:16:46.270  INFO 25127 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/ping],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.ping()
+2017-03-18 16:16:46.271  INFO 25127 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/exit],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.exit()
+2017-03-18 16:16:46.283  INFO 25127 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/query/ping],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.ping()
+2017-03-18 16:16:46.284  INFO 25127 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/query/weather/{iata}/{radius}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.weather(java.lang.String,java.lang.String)
+2017-03-18 16:16:46.288  INFO 25127 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-03-18 16:16:46.296  INFO 25127 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-03-18 16:16:46.439  INFO 25127 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 16:16:46.440  INFO 25127 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 16:16:46.675  INFO 25127 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 16:16:47.504  INFO 25127 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-18 16:16:47.681  INFO 25127 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9090 (http)
+2017-03-18 16:16:47.690  INFO 25127 --- [main] c.crossover.trial.weather.WeatherServer  : Started WeatherServer in 10.92 seconds (JVM running for 12.319)
+2017-03-18 16:16:47.699  INFO 25127 --- [main] c.c.trial.weather.parser.FileParser      : Loading AirportData data.
+2017-03-18 16:16:47.702  INFO 25127 --- [main] c.c.trial.weather.parser.FileParser      : Loaded 10 AirportData entries
+2017-03-18 16:16:48.167  INFO 25127 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-03-18 16:16:48.169  INFO 25127 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-03-18 16:16:48.221  INFO 25127 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 50 ms
+2017-03-18 16:56:53.419  INFO 27510 --- [main] c.crossover.trial.weather.WeatherServer  : Starting WeatherServer on Bang with PID 27510 (started by nitish in /media/nitish/5C4ED2C44ED2965C/MyProject/Crossover/Software Architect/March2017/weather)
+2017-03-18 16:56:53.502  INFO 27510 --- [main] c.crossover.trial.weather.WeatherServer  : No active profile set, falling back to default profiles: default
+2017-03-18 16:56:53.885  INFO 27510 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29215f06: startup date [Sat Mar 18 16:56:53 IST 2017]; root of context hierarchy
+2017-03-18 16:57:01.268  INFO 27510 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9090 (http)
+2017-03-18 16:57:01.376  INFO 27510 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-03-18 16:57:01.382  INFO 27510 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-03-18 16:57:01.945  INFO 27510 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-03-18 16:57:01.950  INFO 27510 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 8116 ms
+2017-03-18 16:57:02.760  INFO 27510 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-03-18 16:57:02.790  INFO 27510 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-03-18 16:57:02.791  INFO 27510 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-03-18 16:57:02.794  INFO 27510 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-03-18 16:57:02.795  INFO 27510 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-03-18 16:57:04.639  INFO 27510 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29215f06: startup date [Sat Mar 18 16:56:53 IST 2017]; root of context hierarchy
+2017-03-18 16:57:05.084  INFO 27510 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/ping],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.ping()
+2017-03-18 16:57:05.113  INFO 27510 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/weather/{iata}/{pointType}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.updateWeather(java.lang.String,java.lang.String,java.lang.String)
+2017-03-18 16:57:05.114  INFO 27510 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airports],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.getAirports()
+2017-03-18 16:57:05.115  INFO 27510 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.getAirport(java.lang.String)
+2017-03-18 16:57:05.118  INFO 27510 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}/{lat}/{long}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.addAirport(java.lang.String,java.lang.String,java.lang.String)
+2017-03-18 16:57:05.119  INFO 27510 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.deleteAirport(java.lang.String)
+2017-03-18 16:57:05.127  INFO 27510 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/exit],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.exit()
+2017-03-18 16:57:05.132  INFO 27510 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/query/ping],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.ping()
+2017-03-18 16:57:05.139  INFO 27510 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/query/weather/{iata}/{radius}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.weather(java.lang.String,java.lang.String)
+2017-03-18 16:57:05.144  INFO 27510 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-03-18 16:57:05.146  INFO 27510 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-03-18 16:57:05.321  INFO 27510 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 16:57:05.330  INFO 27510 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 16:57:05.501  INFO 27510 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 16:57:06.622  INFO 27510 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-18 16:57:06.909  INFO 27510 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9090 (http)
+2017-03-18 16:57:06.935  INFO 27510 --- [main] c.crossover.trial.weather.WeatherServer  : Started WeatherServer in 15.692 seconds (JVM running for 20.209)
+2017-03-18 16:57:06.942  INFO 27510 --- [main] c.c.trial.weather.parser.FileParser      : Loading AirportData data.
+2017-03-18 16:57:06.979  INFO 27510 --- [main] c.c.trial.weather.parser.FileParser      : Loaded 10 AirportData entries
+2017-03-18 16:57:07.677  INFO 27510 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-03-18 16:57:07.678  INFO 27510 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-03-18 16:57:07.750  INFO 27510 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 72 ms
+2017-03-18 23:22:16.603  INFO 14405 --- [main] c.crossover.trial.weather.WeatherServer  : Starting WeatherServer on Bang with PID 14405 (started by nitish in /media/nitish/5C4ED2C44ED2965C/MyProject/Crossover/Software Architect/March2017/weather)
+2017-03-18 23:22:16.663  INFO 14405 --- [main] c.crossover.trial.weather.WeatherServer  : No active profile set, falling back to default profiles: default
+2017-03-18 23:22:17.014  INFO 14405 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@31206beb: startup date [Sat Mar 18 23:22:16 IST 2017]; root of context hierarchy
+2017-03-18 23:22:23.107  INFO 14405 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9090 (http)
+2017-03-18 23:22:23.163  INFO 14405 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-03-18 23:22:23.165  INFO 14405 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-03-18 23:22:23.502  INFO 14405 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-03-18 23:22:23.505  INFO 14405 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6506 ms
+2017-03-18 23:22:23.958  INFO 14405 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-03-18 23:22:23.979  INFO 14405 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-03-18 23:22:24.001  INFO 14405 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-03-18 23:22:24.002  INFO 14405 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-03-18 23:22:24.002  INFO 14405 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-03-18 23:22:25.314  INFO 14405 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@31206beb: startup date [Sat Mar 18 23:22:16 IST 2017]; root of context hierarchy
+2017-03-18 23:22:25.660  INFO 14405 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/ping],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.ping()
+2017-03-18 23:22:25.663  INFO 14405 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/weather/{iata}/{pointType}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.updateWeather(java.lang.String,java.lang.String,java.lang.String)
+2017-03-18 23:22:25.667  INFO 14405 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airports],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.getAirports()
+2017-03-18 23:22:25.670  INFO 14405 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.getAirport(java.lang.String)
+2017-03-18 23:22:25.671  INFO 14405 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}/{lat}/{long}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.addAirport(java.lang.String,java.lang.String,java.lang.String)
+2017-03-18 23:22:25.672  INFO 14405 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.deleteAirport(java.lang.String)
+2017-03-18 23:22:25.673  INFO 14405 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/exit],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.exit()
+2017-03-18 23:22:25.678  INFO 14405 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/query/ping],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.ping()
+2017-03-18 23:22:25.679  INFO 14405 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/query/weather/{iata}/{radius}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.crossover.trial.weather.model.AtmosphericInformation>> com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.weather(java.lang.String,java.lang.String)
+2017-03-18 23:22:25.682  INFO 14405 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-03-18 23:22:25.683  INFO 14405 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-03-18 23:22:25.744  INFO 14405 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 23:22:25.745  INFO 14405 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 23:22:25.881  INFO 14405 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 23:22:26.333  INFO 14405 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-18 23:22:26.612  INFO 14405 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9090 (http)
+2017-03-18 23:22:26.640  INFO 14405 --- [main] c.crossover.trial.weather.WeatherServer  : Started WeatherServer in 11.56 seconds (JVM running for 12.836)
+2017-03-18 23:22:26.651  INFO 14405 --- [main] c.c.trial.weather.parser.FileParser      : Loading AirportData data.
+2017-03-18 23:22:26.719  INFO 14405 --- [main] c.c.trial.weather.parser.FileParser      : Loaded 10 AirportData entries
+2017-03-18 23:22:27.170  INFO 14405 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-03-18 23:22:27.171  INFO 14405 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-03-18 23:22:27.242  INFO 14405 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 71 ms
+2017-03-18 23:25:14.436  INFO 14405 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@31206beb: startup date [Sat Mar 18 23:22:16 IST 2017]; root of context hierarchy
+2017-03-18 23:25:14.445  INFO 14405 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-03-18 23:42:08.922  INFO 16100 --- [main] c.crossover.trial.weather.WeatherServer  : Starting WeatherServer on Bang with PID 16100 (started by nitish in /media/nitish/5C4ED2C44ED2965C/MyProject/Crossover/Software Architect/March2017/airport-weather-java/weather-dist)
+2017-03-18 23:42:08.932  INFO 16100 --- [main] c.crossover.trial.weather.WeatherServer  : No active profile set, falling back to default profiles: default
+2017-03-18 23:42:09.148  INFO 16100 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@35fc6dc4: startup date [Sat Mar 18 23:42:09 IST 2017]; root of context hierarchy
+2017-03-18 23:42:12.288  INFO 16100 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9090 (http)
+2017-03-18 23:42:12.325  INFO 16100 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-03-18 23:42:12.327  INFO 16100 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-03-18 23:42:12.512  INFO 16100 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-03-18 23:42:12.513  INFO 16100 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3381 ms
+2017-03-18 23:42:12.874  INFO 16100 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-03-18 23:42:12.882  INFO 16100 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-03-18 23:42:12.883  INFO 16100 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-03-18 23:42:12.888  INFO 16100 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-03-18 23:42:12.889  INFO 16100 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-03-18 23:42:13.594  INFO 16100 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@35fc6dc4: startup date [Sat Mar 18 23:42:09 IST 2017]; root of context hierarchy
+2017-03-18 23:42:13.763  INFO 16100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/ping],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.ping()
+2017-03-18 23:42:13.770  INFO 16100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/weather/{iata}/{pointType}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.updateWeather(java.lang.String,java.lang.String,java.lang.String)
+2017-03-18 23:42:13.773  INFO 16100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airports],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.getAirports()
+2017-03-18 23:42:13.779  INFO 16100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.getAirport(java.lang.String)
+2017-03-18 23:42:13.780  INFO 16100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}/{lat}/{long}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.addAirport(java.lang.String,java.lang.String,java.lang.String)
+2017-03-18 23:42:13.780  INFO 16100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.deleteAirport(java.lang.String)
+2017-03-18 23:42:13.781  INFO 16100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/exit],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.exit()
+2017-03-18 23:42:13.785  INFO 16100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/query/weather/{iata}/{radius}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.crossover.trial.weather.model.AtmosphericInformation>> com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.weather(java.lang.String,java.lang.String)
+2017-03-18 23:42:13.785  INFO 16100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/query/ping],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.ping()
+2017-03-18 23:42:13.788  INFO 16100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-03-18 23:42:13.794  INFO 16100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-03-18 23:42:13.887  INFO 16100 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 23:42:13.888  INFO 16100 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 23:42:13.991  INFO 16100 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-18 23:42:14.305  INFO 16100 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-18 23:42:14.462  INFO 16100 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9090 (http)
+2017-03-18 23:42:14.473  INFO 16100 --- [main] c.crossover.trial.weather.WeatherServer  : Started WeatherServer in 6.269 seconds (JVM running for 6.816)
+2017-03-18 23:42:14.487  INFO 16100 --- [main] c.c.trial.weather.parser.FileParser      : Loading AirportData data.
+2017-03-18 23:42:14.495  INFO 16100 --- [main] c.c.trial.weather.parser.FileParser      : Loaded 10 AirportData entries
+2017-03-18 23:42:14.671  INFO 16100 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-03-18 23:42:14.673  INFO 16100 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-03-18 23:42:14.751  INFO 16100 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 77 ms
+2017-03-18 23:42:16.231  INFO 16100 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@35fc6dc4: startup date [Sat Mar 18 23:42:09 IST 2017]; root of context hierarchy
+2017-03-18 23:42:16.233  INFO 16100 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-03-29 11:21:10.757  INFO 9460 --- [main] c.crossover.trial.weather.WeatherServer  : Starting WeatherServer on Bang with PID 9460 (started by nitish in /media/nitish/5C4ED2C44ED2965C/MyProject/Crossover/Software Architect/March2017/airport-weather-java/weather-dist)
+2017-03-29 11:21:10.801  INFO 9460 --- [main] c.crossover.trial.weather.WeatherServer  : No active profile set, falling back to default profiles: default
+2017-03-29 11:21:11.082  INFO 9460 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@11e21d0e: startup date [Wed Mar 29 11:21:11 IST 2017]; root of context hierarchy
+2017-03-29 11:21:18.091  INFO 9460 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9090 (http)
+2017-03-29 11:21:18.143  INFO 9460 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-03-29 11:21:18.146  INFO 9460 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-03-29 11:21:18.546  INFO 9460 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-03-29 11:21:18.547  INFO 9460 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7477 ms
+2017-03-29 11:21:19.057  INFO 9460 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-03-29 11:21:19.065  INFO 9460 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-03-29 11:21:19.066  INFO 9460 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-03-29 11:21:19.066  INFO 9460 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-03-29 11:21:19.067  INFO 9460 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-03-29 11:21:19.985  INFO 9460 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@11e21d0e: startup date [Wed Mar 29 11:21:11 IST 2017]; root of context hierarchy
+2017-03-29 11:21:20.360  INFO 9460 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/ping],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.ping()
+2017-03-29 11:21:20.374  INFO 9460 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/weather/{iata}/{pointType}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.updateWeather(java.lang.String,java.lang.String,java.lang.String)
+2017-03-29 11:21:20.375  INFO 9460 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airports],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.getAirports()
+2017-03-29 11:21:20.377  INFO 9460 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.getAirport(java.lang.String)
+2017-03-29 11:21:20.378  INFO 9460 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}/{lat}/{long}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.addAirport(java.lang.String,java.lang.String,java.lang.String)
+2017-03-29 11:21:20.378  INFO 9460 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/airport/{iata}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.deleteAirport(java.lang.String)
+2017-03-29 11:21:20.379  INFO 9460 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/collect/exit],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> com.crossover.trial.weather.rest.RestWeatherCollectorEndpoint.exit()
+2017-03-29 11:21:20.382  INFO 9460 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/query/ping],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.ping()
+2017-03-29 11:21:20.389  INFO 9460 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/query/weather/{iata}/{radius}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.crossover.trial.weather.model.AtmosphericInformation>> com.crossover.trial.weather.rest.RestWeatherQueryEndpoint.weather(java.lang.String,java.lang.String)
+2017-03-29 11:21:20.392  INFO 9460 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-03-29 11:21:20.397  INFO 9460 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-03-29 11:21:20.507  INFO 9460 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-29 11:21:20.511  INFO 9460 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-29 11:21:20.645  INFO 9460 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-29 11:21:21.349  INFO 9460 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-29 11:21:21.602  INFO 9460 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9090 (http)
+2017-03-29 11:21:21.627  INFO 9460 --- [main] c.crossover.trial.weather.WeatherServer  : Started WeatherServer in 13.182 seconds (JVM running for 15.09)
+2017-03-29 11:21:21.640  INFO 9460 --- [main] c.c.trial.weather.parser.FileParser      : Loading AirportData data.
+2017-03-29 11:21:21.656  INFO 9460 --- [main] c.c.trial.weather.parser.FileParser      : Loaded 10 AirportData entries
+2017-03-29 11:21:22.133  INFO 9460 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-03-29 11:21:22.134  INFO 9460 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-03-29 11:21:22.160  INFO 9460 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+2017-03-29 11:21:28.114  INFO 9460 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@11e21d0e: startup date [Wed Mar 29 11:21:11 IST 2017]; root of context hierarchy
+2017-03-29 11:21:28.121  INFO 9460 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
