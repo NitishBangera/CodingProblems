@@ -74,8 +74,8 @@ class CacheStructure<T> {
 		if (head == null) {
 			head = dataVal;
 		} else {
-			dataVal.setPrevious(current);
-			current.setNext(dataVal);
+			dataVal.setPrevious(rear);
+			rear.setNext(dataVal);
 		}
 		rear = dataVal;
 		current = dataVal;
@@ -252,6 +252,7 @@ public class UrlCache {
 		struct.add("yahoo.com");
 		struct.add("yahoo.com");
 		struct.add("yahoo.com");
+		struct.add("test.com");
 		struct.print();
 		struct.printLeastVisited();
 		struct.printFrequentlyVisited(3);
