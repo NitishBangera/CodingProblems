@@ -163,12 +163,18 @@ class Node<T> {
 		this.next = next;
 	}
 	
+	@Override
 	public int hashCode() {
 		return data.hashCode();
 	}
 	
-	public boolean equals(Node<T> that) {
-		return this.data.equals(that.getData());
+	@Override
+	public boolean equals(Object that) {
+		if (that == null) return false;
+		if (that == this) return true;
+		if (!(that instanceof Node))return false;
+		Node thatVal = (Node) that;
+		return this.data.equals(thatVal.getData());
 	}
 }
 
