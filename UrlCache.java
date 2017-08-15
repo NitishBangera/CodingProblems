@@ -172,71 +172,7 @@ class Node<T> {
 	}
 }
 
-public class UrlCache {
-	private Map<String, Integer> urlVisits;
-	private LinkedList<String> order;
-	
-	public UrlCache() {
-		urlVisits = new HashMap<String, Integer>();
-		order = new LinkedList<String>();
-	}
-	
-	public synchronized void add(String url) {
-		int counter = 1;
-		if (urlVisits.containsKey(url)) {
-			counter = urlVisits.get(url);
-			urlVisits.put(url, ++counter);
-		} else {
-			urlVisits.put(url, counter);
-		}
-		addInOrder(url, counter);
-	}
-	
-	private void addInOrder(String url, int counter) {
-		if (counter == 1) {
-			order.offer(url);
-		} else {
-			for (int i = 0; i < order.size(); i++) {
-				String val = order.get(i);
-				if (counter >= urlVisits.get(val)) {
-					order.add(i, url);
-					order.removeLastOccurrence(url);
-					break;
-				}
-			}
-		}
-	}
-	
-	public void printFrequentlyVisited(int n) {
-		System.out.println("Top " + n + " frequently visited");
-		for (String url : order) {
-			if (n > 0) {
-				System.out.println(url);
-			}
-			n--;
-		}
-	}
-	
-	public void printLeastVisited() {
-		System.out.println("Leasted visted : " + order.getLast());
-	}
-	
-	public void printFrequentlyVisited(int fromRank, int toRank) {
-		System.out.println("Frequently visited between ranks " + fromRank + " and " + toRank);
-		if (--fromRank <= order.size()) {
-			for (int i = 0; i < order.size(); i++) {
-				if (i < fromRank) {
-					continue;
-				}
-				if (--toRank >= 0) {
-					System.out.println(order.get(i));
-				}
-			}
-		} else {
-			System.out.println("Invalid request");
-		}
-	}
-	
+public class UrlCache {	
 	public static void main(String... args) {
 		CacheStructure<String> struct = new CacheStructure<String>();
 		struct.add("google.com");
@@ -257,15 +193,5 @@ public class UrlCache {
 		struct.printLeastVisited();
 		struct.printFrequentlyVisited(3);
 		struct.printFrequentlyVisited(1, 3);
-		/*UrlCache cache = new UrlCache();
-		cache.add("google.com");
-		cache.add("yahoo.com");
-		cache.add("google.com");
-		cache.add("rediff.com");
-		cache.add("google.com");
-		cache.add("rediff.com");
-		cache.printFrequentlyVisited(2);
-		cache.printLeastVisited();
-		cache.printFrequentlyVisited(2, 3);*/
 	}
 }
