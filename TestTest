@@ -1,0 +1,69 @@
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Set;
+
+public class TestTest {
+	public static void main(String... args) {
+		System.out.println(isPalindrome(2332));
+		System.out.println(isPalindrome(2));
+		System.out.println(isPalindrome(233));
+		System.out.println(findNumbersNotPresent(new int[] {1,2,3,4,5}, new int[] {2,3,1,0,5}));
+		System.out.println(getSmallestAtPosition(new int[] {7, 10, 4, 3, 20, 15}, 3));
+		System.out.println(getSmallestAtPosition(new int[] {7, 10, 4, 3, 20, 15}, 4));
+		System.out.println(isPythagoreanTriplet(new int[] {3, 1, 4, 6, 5}));
+		System.out.println(isPythagoreanTriplet(new int[] {10, 4, 6, 12, 5}));
+	}
+	
+	public static boolean isPalindrome(long value) {
+		char [] tokens = String.valueOf(value).toCharArray();
+		for (int i = 0, j = tokens.length - 1; i <= j; i++, j--) {
+			if (tokens[i] != tokens[j]) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public static List<Integer> findNumbersNotPresent(int[] array1, int[] array2) {
+		Set<Integer> hashArray = new HashSet<Integer>();
+		for (int i : array2) {
+			hashArray.add(i);
+		}
+		
+		List<Integer> result = new LinkedList<Integer>();
+		for (int i : array1) {
+			if (!hashArray.contains(i)) {
+				result.add(i);
+			}
+		}
+		return result;
+	}
+	
+	public static boolean isPythagoreanTriplet(int[] values) {
+		int [] squaredSortedVal = Arrays.stream(values).map(p -> p * p).sorted().toArray();
+		int size = squaredSortedVal.length;
+		for (int i = size - 1; i >= 2; i--) {
+			int c = squaredSortedVal[i];
+			for (int j = 0, k = i; j < k;) {
+				int ab = squaredSortedVal[j] + squaredSortedVal[k];
+				if (ab == c) {
+					return true;
+				} else {
+					if (ab < c) {
+						j++;
+					} else {
+						k--;
+					}
+				}
+			}
+		}
+		return false;
+	}
+	
+	public static int getSmallestAtPosition(int[] values, int position) {
+		Arrays.sort(values);
+		return values[position - 1];
+	}
+}
