@@ -18,15 +18,20 @@ public class TaskScheduler {
         taskE.addDependents(taskB, taskD);
         var taskF = new Task("F", 1);
 
-        var tasks = List.of(taskA, taskB, taskC, taskD, taskE, taskF);
-        System.out.println(findCompletionTime(tasks));
+        var tasks = List.of(taskB, taskC, taskD, taskA, taskE, taskF);
+        System.out.printf("\nShortest completion time : %d time units\n", findCompletionTime(tasks));
     }
 
     private static int findCompletionTime(Collection<Task> tasks) {
         int time = 0;
+        // Task cache for faster reference
         var taskCache = new HashMap<String, Task>();
+
+        // Dependency graph for a Task.
         var dependency = new HashMap<String, List<String>>();
-        for (var task : tasks) {
+
+        // Building the dependency graph based on the tasks that are provided.
+        tasks.parallelStream().forEach(task -> {
             var parentId = task.getId();
             if (!dependency.containsKey(parentId)) {
                 dependency.put(parentId, new LinkedList<>());
@@ -36,22 +41,22 @@ public class TaskScheduler {
             if (!dependents.isEmpty()) {
                 for (var dependent : dependents) {
                     var childId = dependent.getId();
-                    if (dependency.containsKey(childId)) {
-                        dependency.get(childId).add(parentId);
-                    } else {
-                        var parents = new LinkedList<String>();
-                        parents.add(parentId);
-                        dependency.put(childId, parents);
+                    var parents = dependency.get(childId);
+                    if (parents == null) {
+                        parents = new LinkedList<>();
                     }
+                    parents.add(parentId);
+                    dependency.put(childId, parents);
                 }
             }
-        }
+        });
 
+        //Traversing the dependency and processing the task.
         var completed = new HashSet<String>();
-        var i = 0;
+        var iterationCount = 0;
         while(!dependency.isEmpty()) {
             var iterationCompletedTasks = new HashSet<String>();
-            System.out.printf("Iteration %d : %s\n", ++i, dependency);
+            System.out.printf("\nIteration %d : %s\n", ++iterationCount, dependency);
             int maxDuration = 0;
             for (var entry : dependency.entrySet()) {
                 var current = entry.getKey();
