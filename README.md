@@ -22,3 +22,4 @@ Coding Problems undertaken
 19. Crossover Software Architect test : weather-dist
 20. Url cache.
 21. Task Scheduler
+22. NodeIterator to calculate sum of edges
